@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="imgs/encrypt.png" type="image/png">
+	<title>Sistem de criptare afin</title>
+</head>
+<body onload="hide();">
+  <div class="rows">
+      <img src="imgs/settings.png" class="settings" onclick="showSettings();" ondblclick="hideSettings();">
+      <img src="imgs/encrypt.png" class="settings" onclick="showEncrypt();" ondblclick="hideEncrypt();">
+      <img src="imgs/decrypt.png" class="settings" onclick="showDecrypt();" ondblclick="hideDecrypt();">
+  </div>
+  <div class="row">
+  <div class="column" id="settings">
+  <p class="subtitle">Setari</p>
+  <label for="n">Introduceti n : </label>
+  <input type="text" id="n" name="n"><br><br>
+  <input type="button" class="button__set" value="Variantele lui a" onclick="posibleValuesFor_a();">
+  <br><br>
+  <label for="n">Introduceti a : </label>
+  <input type="text" id="a" name="a">
+  <br><br>
+  <label for="b">Introduceti b : </label>
+  <input type="text" id="b" name="b">
+  <label for="b">In intervalul numerelor (1 -> n -1 ). </label>
+  <br><br>
+  <label  id="posibleValues"></label>
+  <br><br>
+  <input type="button" class="button__set" value="Sterge" onclick="clearSettings();">
+  </div>
+
+<div class="column" id="encrypt">
+<p class="subtitle">Criptarea</p>
+  <label for="textcl">Introduceti un text clar : </label>
+  <input type="text" id="textcl" name="textcl"> <br><br>
+  <input type="button" class="button__set" value="Cripteaza" onclick="cript();">
+  <br><br>
+  <label for="textcr">Textul criptat: </label>
+  <input type="text" id="textcr" name="textcr"><br><br>
+  <input type="button" class="button__set" value="Sterge" onclick="clearEncrypt();">
+</div>
+
+<div class="column" id="decrypt">
+<p class="subtitle">Decriptarea</p>
+  <label for="textcr">Introduceti textul criptat : </label>
+  <input type="text" id="textcr1" name="textcr1"><br><br>
+  <input type="button" class="button__set" value="Decripteaza" onclick="decript();">
+  <br><br>
+  <label for="textcl1">Textul clar : </label>
+  <input type="text" id="textcl1" name="textcl1">
+  <br><br>
+    <input type="button" class="button__set" value="Sterge" onclick="clearDecrypt();">
+</div>
+</div>
+<p class="pd"><span>© Copyright Dordea Pavel | 2021</span></p>
+</body>
+ <script src="js/scripts.js"></script> 
+</html>
